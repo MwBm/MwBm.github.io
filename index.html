@@ -5,36 +5,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Matthew Bergstrom — portfolio, experience, and projects"
+      content="Matthew Bergstrom — platform engineer. Kubernetes provisioning, developer self-service, and AI tooling at Resmed."
     />
-    <title>Matthew Bergstrom | Portfolio</title>
+    <title>Matthew Bergstrom | Platform Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <link rel="icon" href="images/icon.ico" type="image/x-icon" />
     <link rel="preload" as="image" href="images/foreststream-1920.jpg" />
-    <link href="css/style.css?v=2.0.1" rel="stylesheet" />
+    <link href="css/style.css?v=3.0.0" rel="stylesheet" />
   </head>
 
   <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
     <header class="site-header" id="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#home" aria-label="Go to top">MB</a>
+      <div class="header-inner wrap">
+        <a class="brand" href="#top" data-cursor="hover" aria-label="Matthew Bergstrom — go to top">
+          <span class="brand-mark">MB</span>
+          <span class="brand-secret" hidden aria-hidden="true">still awake, still shipping</span>
+        </a>
 
         <button
           class="nav-toggle"
@@ -46,386 +40,624 @@
         </button>
 
         <nav class="site-nav" id="main-nav" aria-label="Main navigation">
-          <a href="#intro" class="nav-link">Intro</a>
-          <a href="#work" class="nav-link">Work</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#tech" class="nav-link">Tech</a>
+          <a href="#about" class="nav-link" data-cursor="hover">About</a>
+          <a href="#work" class="nav-link" data-cursor="hover">Work</a>
+          <a href="#projects" class="nav-link" data-cursor="hover">Projects</a>
+          <a href="#stack" class="nav-link" data-cursor="hover">Stack</a>
+          <a href="#education" class="nav-link" data-cursor="hover">School</a>
+          <a href="#contact" class="nav-link" data-cursor="hover">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main id="home">
-      <section class="hero" aria-label="Hero section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content reveal">
-          <p class="eyebrow">Engineering + Program Leadership</p>
-          <h1>Hello, my name is Matthew Bergstrom</h1>
-          <p class="typing-line" aria-live="polite">
-            <span id="text" aria-hidden="true"></span>
-            <span id="cursor" aria-hidden="true"></span>
+    <main id="top">
+      <section class="hero" id="hero" aria-labelledby="hero-heading">
+        <div class="wrap hero-inner">
+          <p class="hero-eyebrow">
+            <span>Platform Engineering Intern</span>
+            <span class="dot" aria-hidden="true">/</span>
+            <span>Resmed</span>
+            <span class="dot" aria-hidden="true">/</span>
+            <span>San Diego, CA</span>
           </p>
+
+          <h1 id="hero-heading" class="hero-title" data-fill>
+            <span class="line">Matthew</span>
+            <span class="line">Bergstrom</span>
+          </h1>
+
+          <p class="hero-lede">
+            I build the systems that delete the ticket — self-service
+            provisioning, automated developer workflows, and tooling that turns
+            developer pain into something you can actually measure.
+          </p>
+
+          <ul class="hero-facts">
+            <li><span class="fact-k">Now</span><span class="fact-v">Platform engineering, Resmed</span></li>
+            <li><span class="fact-k">Since</span><span class="fact-v">June 2025 — three extensions</span></li>
+            <li><span class="fact-k">School</span><span class="fact-v">CS &amp; Engineering, SCU '27</span></li>
+          </ul>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-primary" href="#work" data-cursor="hover">See the work</a>
             <a
-              class="btn btn-secondary"
-              href="mailto:matthewbergstrom23@gmail.com"
-              >Contact Me</a
+              class="btn btn-ghost"
+              href="resume/Matthew_Bergstrom_Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              data-cursor="hover"
+              >Résumé (PDF)</a
             >
           </div>
         </div>
+
+        <p class="scroll-cue" aria-hidden="true">scroll</p>
       </section>
 
-      <section
-        id="intro"
-        class="section intro-section reveal"
-        aria-labelledby="intro-heading"
-      >
-        <div class="intro-grid">
-          <div class="profile-column">
-            <img
-              src="images/24_Bergstrom_32-1200.jpg"
-              alt="Portrait of Matthew Bergstrom"
-              class="profile-photo"
-              loading="lazy"
-            />
-            <div class="profile-buttons" aria-label="Social links">
-              <a
-                class="btn btn-icon"
-                href="https://github.com/MwBm"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-              <a
-                class="btn btn-icon"
-                href="https://www.linkedin.com/in/matthew-bergstrom-3578aa215/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a
-                class="btn btn-icon"
-                href="https://docs.google.com/document/d/1Nv6SG-xT0QeYuAE3b3oYDBtFEf70PHlEfYCOBLEEzqY/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Resume"
-              >
-                <i class="fas fa-file-alt" aria-hidden="true"></i>
-              </a>
-              <a
-                class="btn btn-icon"
-                href="mailto:matthewbergstrom23@gmail.com"
-                aria-label="Email"
-              >
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-              </a>
-            </div>
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">About</p>
+            <h2 id="about-heading" class="section-title" data-words>Structure in complexity</h2>
           </div>
 
-          <div class="intro-copy">
-            <h2 id="intro-heading">Introduction</h2>
-            <p>
-              I’m an engineer and facilitator passionate about bridging
-              technology and people. I believe that great products come from
-              clear communication, thoughtful design, and teams that share a
-              common purpose.
-            </p>
-            <p>
-              My experience spans automation, AI projects, and cross-functional
-              program delivery — from developing reusable tools that streamline
-              workflows to leading collaborative efforts that transform complex
-              ideas into simple, actionable solutions. Whether building
-              predictive models or guiding a team through tight deadlines, I’m
-              energized by finding structure in complexity and driving outcomes
-              that make technology feel seamless and human.
-            </p>
-            <p>
-              Outside of work, you’ll usually find me following F1 strategy
-              breakdowns, weightlifting, or chasing the perfect mountain-bike
-              trail. I love photography, rainy days with a good book, and the
-              creative spark that comes from noticing small details, the same
-              mindset I bring to engineering and program management.
-            </p>
-          </div>
-        </div>
-      </section>
+          <div class="about-grid">
+            <figure class="portrait">
+              <img
+                src="images/24_Bergstrom_32-1200.jpg"
+                alt="Matthew Bergstrom"
+                loading="lazy"
+                width="1200"
+                height="1600"
+              />
+              <figcaption>San Diego, CA</figcaption>
+            </figure>
 
-      <section id="work" class="section reveal" aria-labelledby="work-heading">
-        <div class="section-header">
-          <h2 id="work-heading">Work Experience</h2>
-        </div>
-        <article class="card">
-          <h3>Platform Engineering Intern — ResMed</h3>
-          <p class="work-meta">June 2025 — Present · San Diego, CA</p>
-          <div class="tag-row">
-            <span class="tag">TypeScript</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">APIs</span>
-            <span class="tag">Kubernetes</span>
-            <span class="tag">Helm</span>
-            <span class="tag">Vitest</span>
-            <span class="tag">Slack</span>
-          </div>
-          <p>
-            Built platform tooling and automation that improve reliability,
-            reduce repetitive engineering work, and speed up developer feedback
-            loops.
-          </p>
-          <details class="details-block">
-            <summary>Key impact</summary>
-            <div class="details-content">
-              <ul>
+            <div class="about-copy">
+              <p class="lead">
+                I'm a computer science student at Santa Clara and a platform
+                engineer at Resmed, where I've spent the last year replacing
+                manual processes with systems developers can run themselves.
+              </p>
+              <p>
+                Most of my work starts the same way: someone files a request, a
+                human does a set of steps by hand, and everyone accepts that as
+                the cost of doing business. I like taking that apart —
+                provisioning Kubernetes namespaces through an API instead of a
+                ticket, rebuilding a Bash pipeline into TypeScript that a team
+                can actually test, or reading a year of support messages with an
+                LLM so leads can see which platform problems keep coming back.
+              </p>
+              <p>
+                I care about the boring parts that make automation trustworthy:
+                retries, rollbacks, tight permission scopes, and tests that fail
+                before production does. I work in sprints alongside senior
+                engineers, write things down, and try to leave every system
+                easier to change than I found it.
+              </p>
+              <p>
+                Outside of work I'm lifting, surfing at sunset, on a mountain
+                bike, or watching F1 strategy calls fall apart in real time.
+              </p>
+
+              <ul class="social-row" aria-label="Links">
                 <li>
-                  Created an AI-powered Slack summarization tool to identify
-                  recurring platform problems and improve developer experience
+                  <a href="https://github.com/MwBm" target="_blank" rel="noopener noreferrer" data-cursor="hover">
+                    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    <span>GitHub</span>
+                  </a>
                 </li>
                 <li>
-                  Designed and improved internal developer tooling, reducing
-                  boilerplate and streamlining common workflows
+                  <a href="https://www.linkedin.com/in/matthew-john-bergstrom" target="_blank" rel="noopener noreferrer" data-cursor="hover">
+                    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3.4 2A1.4 1.4 0 1 0 3.4 4.8 1.4 1.4 0 0 0 3.4 2ZM2.2 6h2.4v8H2.2V6Zm4.2 0h2.3v1.1h.03c.32-.6 1.1-1.24 2.27-1.24 2.43 0 2.88 1.6 2.88 3.68V14h-2.4v-3.7c0-.88-.02-2.02-1.23-2.02-1.23 0-1.42.96-1.42 1.95V14H6.4V6Z"/></svg>
+                    <span>LinkedIn</span>
+                  </a>
                 </li>
                 <li>
-                  Developed reusable TypeScript actions for internal alerts,
-                  enabling faster and more consistent communication
+                  <a href="resume/Matthew_Bergstrom_Resume.pdf" target="_blank" rel="noopener" data-cursor="hover">
+                    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.5 1H4a1.5 1.5 0 0 0-1.5 1.5v11A1.5 1.5 0 0 0 4 15h8a1.5 1.5 0 0 0 1.5-1.5V5L9.5 1Zm0 1.9L11.9 5.3H9.5V2.9ZM5 7.6h6v1.1H5V7.6Zm0 2.6h6v1.1H5v-1.1Z"/></svg>
+                    <span>Résumé</span>
+                  </a>
                 </li>
                 <li>
-                  Built CI/CD pipelines with GitHub Actions to improve test
-                  reliability and surface failures earlier in the lifecycle
-                </li>
-                <li>
-                  Integrated external APIs with robust error handling and rate
-                  limiting for dependable automation
-                </li>
-                <li>
-                  Implemented unit tests and collaborated in Agile sprints to
-                  deliver reliable, maintainable features in a large codebase
-                </li>
-                <li>
-                  Worked with Kubernetes and Helm to support automation of
-                  shared namespaces
-                </li>
-                <li>
-                  Earned an Outstanding Presentation award and multiple
-                  internship extensions (12+ months) for technical impact
+                  <a href="mailto:matthewbergstrom23@gmail.com" data-cursor="hover">
+                    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1.5 3h13A1.5 1.5 0 0 1 16 4.5v7A1.5 1.5 0 0 1 14.5 13h-13A1.5 1.5 0 0 1 0 11.5v-7A1.5 1.5 0 0 1 1.5 3Zm6.5 5.2 6-3.2h-12l6 3.2Zm0 1.3L1 6v5.5h14V6L8 9.5Z"/></svg>
+                    <span>Email</span>
+                  </a>
                 </li>
               </ul>
             </div>
-          </details>
-        </article>
-
-        <article class="card">
-          <h3>Retail Sales Associate — Vuori</h3>
-          <p class="work-meta">April 2025 — June 2025 · Santa Clara, CA</p>
-          <div class="tag-row">
-            <span class="tag">Customer Experience</span>
-            <span class="tag">Team Collaboration</span>
-            <span class="tag">Operations</span>
           </div>
-          <p>
-            Delivered personalized customer support while partnering with
-            teammates to exceed sales goals and improve day-to-day store
-            operations.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Tour Guide — San Diego Bike and Kayak</h3>
-          <p class="work-meta">July 2024 — September 2024 · San Diego, CA</p>
-          <div class="tag-row">
-            <span class="tag">Leadership</span>
-            <span class="tag">Safety</span>
-            <span class="tag">Logistics</span>
-            <span class="tag">Adaptability</span>
-          </div>
-          <p>
-            Led 15+ kayak tours weekly, managing logistics and safety while
-            adapting to changing conditions to maintain consistent 5-star guest
-            reviews.
-          </p>
-        </article>
-      </section>
-
-      <section
-        id="projects"
-        class="section reveal"
-        aria-labelledby="projects-heading"
-      >
-        <div class="section-header">
-          <h2 id="projects-heading">Projects</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="card project-card">
-            <video
-              controls
-              poster="images/awslogo.png"
-              class="project-media"
-              aria-label="AWSxINRIX Demo"
-            >
-              <source src="images/aws.mov" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <h3>AWSxINRIX Hackathon</h3>
-            <div class="tag-row">
-              <span class="tag">Python</span>
-              <span class="tag">Flask</span>
-              <span class="tag">AWS Bedrock</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <p>
-              Led a 4-member team to build a Chrome extension using Claude 3
-              Sonnet via AWS Bedrock. Oversaw API integration and backend
-              development in Python (Flask), improving navigation efficiency by
-              ~15 seconds.
-            </p>
-            <details class="details-block">
-              <summary>Learn more</summary>
-              <div class="details-content">
-                <h4>Challenge</h4>
-                <p>Older users often struggle navigating complex websites.</p>
-                <h4>Solution</h4>
-                <p>
-                  Built an AI-powered Chrome extension that analyzes the current
-                  page and provides either instructions or a direct link to the
-                  desired destination.
-                </p>
-                <h4>What I Learned</h4>
-                <p>
-                  Strengthened backend development with Flask, API integration,
-                  and end-to-end extension design.
-                </p>
-              </div>
-            </details>
-            <a
-              class="btn btn-primary project-link"
-              href="https://devpost.com/software/askron"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View DevPost</a
-            >
-          </article>
-
-          <article class="card project-card">
-            <img
-              src="images/mLplot.png"
-              loading="lazy"
-              alt="Disneyland data plot"
-              class="project-media"
-            />
-            <h3>Disneyland Ride Wait Time Predictor</h3>
-            <div class="tag-row">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">NeuralForecast</span>
-              <span class="tag">XGBoost</span>
-              <span class="tag">Matplotlib</span>
-              <span class="tag">NumPy</span>
-            </div>
-            <p>
-              This project explored how historical and environmental factors
-              influence theme park ride wait times. We designed a full machine
-              learning pipeline to predict wait times using time-series and
-              regression models.
-            </p>
-            <details class="details-block">
-              <summary>Learn more</summary>
-              <div class="details-content">
-                <h4>Challenges</h4>
-                <p>
-                  Working with noisy, time-dependent data affected by external
-                  factors such as weather and holidays, while selecting
-                  appropriate models.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                  Built a data pipeline using Pandas to clean, preprocess, and
-                  aggregate historical wait-time data, with feature engineering
-                  and MAE evaluation.
-                </p>
-                <h4>What I Learned</h4>
-                <p>
-                  Learned the importance of feature engineering in real-world
-                  systems and how to communicate model performance clearly.
-                </p>
-              </div>
-            </details>
-            <a
-              class="btn btn-primary project-link"
-              href="https://github.com/MwBm/DataAnalysisIntro/tree/main"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View GitHub Repo</a
-            >
-          </article>
         </div>
       </section>
 
-      <section id="tech" class="section reveal" aria-labelledby="tech-heading">
-        <div class="section-header">
-          <h2 id="tech-heading">Tech Stack</h2>
-        </div>
-        <div class="tech-groups">
-          <article class="card tech-card">
-            <h3>Programming Languages</h3>
-            <div class="tag-row">
-              <span class="tag"
-                ><i class="devicon-python-plain" aria-hidden="true"></i
-                >Python</span
-              >
-              <span class="tag"
-                ><i class="devicon-cplusplus-plain" aria-hidden="true"></i>C /
-                C++</span
-              >
-              <span class="tag"
-                ><i class="devicon-javascript-plain" aria-hidden="true"></i
-                >JavaScript / TypeScript</span
-              >
-              <span class="tag"
-                ><i class="devicon-mysql-plain" aria-hidden="true"></i>SQL</span
-              >
-              <span class="tag"
-                ><i class="devicon-matlab-plain" aria-hidden="true"></i
-                >MATLAB</span
-              >
-            </div>
-          </article>
+      <section id="work" class="section" aria-labelledby="work-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Work</p>
+            <h2 id="work-heading" class="section-title" data-words>Platform engineering at Resmed</h2>
+            <p class="section-note">
+              Six systems, listed in the order I shipped them. June 2025 to
+              present — three internship extensions, part-time at 10–15 hrs/week
+              during the school year, and an Outstanding Presentation award along
+              the way.
+            </p>
+          </div>
 
-          <article class="card tech-card">
-            <h3>Frameworks &amp; Tools</h3>
-            <div class="tag-row">
-              <span class="tag"
-                ><i class="fas fa-brain" aria-hidden="true"></i
-                >Scikit-learn</span
-              >
-              <span class="tag"
-                ><i class="fas fa-table" aria-hidden="true"></i>Pandas</span
-              >
-              <span class="tag"
-                ><i class="fas fa-chart-line" aria-hidden="true"></i
-                >Matplotlib</span
-              >
-              <span class="tag"
-                ><i class="devicon-git-plain" aria-hidden="true"></i>Git</span
-              >
-              <span class="tag"
-                ><i class="fab fa-github" aria-hidden="true"></i>GitHub
-                Actions</span
-              >
-              <span class="tag"
-                ><i class="fas fa-vial" aria-hidden="true"></i>Vitest (Unit
-                Testing)</span
-              >
+          <ol class="work-list">
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">01</div>
+                <ul class="tags tags-stack">
+                  <li>Backstage</li>
+                  <li>GitHub API</li>
+                  <li>GitHub Actions</li>
+                  <li>Slack API</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>Self-service access on the developer portal</h3>
+                <p class="work-summary">
+                  Turned a manual access-request process into a form on our
+                  Backstage developer portal: submit it, and a GitHub issue is
+                  filed through the API and the right team leads get pinged in
+                  Slack.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      I built the portal templates teams pick from, mapped each
+                      form to a structured GitHub issue, and wired an
+                      issue-creation workflow that posts a formatted request to
+                      the leads' Slack channel. Requests stopped depending on
+                      knowing who to ask.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">02</div>
+                <ul class="tags tags-stack">
+                  <li>TypeScript</li>
+                  <li>Vitest</li>
+                  <li>Slack API</li>
+                  <li>GitHub Actions</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>Developer announcements, rebuilt in TypeScript</h3>
+                <p class="work-summary">
+                  Replaced a pair of Bash scripts with a tested TypeScript
+                  service that publishes weekly developer announcements to Slack
+                  — and can edit ones it already sent.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      Announcements queue up as issues and ship on a schedule,
+                      with an urgent path that publishes immediately. The rewrite
+                      made the pipeline unit-testable, then unlocked three things
+                      the Bash version couldn't do:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Editable messages</strong> — the Slack message ID
+                        is persisted back to the issue, so an edit updates the
+                        original post instead of stacking corrections in a thread.
+                      </li>
+                      <li>
+                        <strong>Author attribution</strong> — GitHub users mapped
+                        to Slack IDs, so readers know who to ask.
+                      </li>
+                      <li>
+                        <strong>Tag-driven color coding</strong> — a tag on the
+                        issue sets the message's accent color by category.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">03</div>
+                <ul class="tags tags-stack">
+                  <li>TypeScript</li>
+                  <li>LLM prompting</li>
+                  <li>Slack API</li>
+                  <li>GitHub Actions</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>AI pipeline for developer pain points</h3>
+                <p class="work-summary">
+                  Built a daily-to-monthly pipeline that reads our developer
+                  support channel and tells platform leads which parts of the
+                  platform actually hurt — classified by area, counted weekly,
+                  summarized monthly.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      A daily action pulls the last 24 hours of support messages
+                      and filters the noise — bot posts, join events, and
+                      one-word replies that carry no signal.
+                    </p>
+                    <p>
+                      A weekly action classifies what's left. Each message goes
+                      through a regex keyword pass built from vocabulary I
+                      collected from the leads of each platform area, then to an
+                      LLM with that context attached and prompting tuned to
+                      return exactly one category token. Counts per area go to
+                      Slack every week.
+                    </p>
+                    <p>
+                      A monthly action pools a month of classified messages by
+                      area and asks for ranked pain points with suggested
+                      remediations, grounded only in the messages themselves —
+                      no outside speculation. That summary goes to managers and
+                      team leads.
+                    </p>
+                    <p>
+                      Before any of it, I ran a spike comparing three storage
+                      backends — vector search, expiring CI artifacts, and a
+                      durable artifact repository — and wrote up the tradeoffs.
+                      Vector search can't reliably answer "everything from last
+                      week," and expiring artifacts make past classifications
+                      impossible to audit, so durable storage won.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">04</div>
+                <ul class="tags tags-stack">
+                  <li>Kubernetes SDK</li>
+                  <li>Helm</li>
+                  <li>TypeScript</li>
+                  <li>GitHub Actions</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>Kubernetes namespace provisioning</h3>
+                <p class="work-summary">
+                  Designed and built the system that provisions custom Kubernetes
+                  namespaces on demand. Teams used to get exactly one namespace
+                  per cluster, tied to the team name — a second one meant
+                  inventing a second team.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      Namespace definitions live in config as code. The action
+                      reads the changed files on a pull request, works out which
+                      clusters are affected, and provisions through the
+                      Kubernetes SDK and Helm APIs — namespace, permissions, and
+                      the tenant chart that makes it usable.
+                    </p>
+                    <ul>
+                      <li>
+                        Ported a large Bash provisioning action to TypeScript
+                        first, so the new work had a testable foundation.
+                      </li>
+                      <li>
+                        Scoped each namespace to specific repositories rather
+                        than every team with cluster access — a much smaller
+                        blast radius for deploys.
+                      </li>
+                      <li>
+                        Added retry and rollback around Helm upgrades, which is
+                        where provisioning most often got stuck.
+                      </li>
+                      <li>
+                        Ran end-to-end tests until custom namespaces had full
+                        parity with the original team namespaces.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">05</div>
+                <ul class="tags tags-stack">
+                  <li>DataDog</li>
+                  <li>Terraform</li>
+                  <li>Helm</li>
+                  <li>EKS</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>EKS metrics and migration dashboards</h3>
+                <p class="work-summary">
+                  Configured which EKS metrics ship to DataDog through a Helm
+                  chart and defined the dashboards in Terraform. Senior engineers
+                  use it to watch our Ingress-to-Gateway API migration.
+                </p>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">06</div>
+                <ul class="tags tags-stack">
+                  <li>Node.js</li>
+                  <li>TypeScript</li>
+                  <li>PostgreSQL</li>
+                  <li>SQLite</li>
+                  <li>GitHub API</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>GitHub Copilot budget tool</h3>
+                <p class="work-summary">
+                  Owned a full-stack self-service page end to end: developers
+                  check their Copilot usage and request budget, and leads approve
+                  or reject requests in the same place.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      I built the routes, middleware, handlers, and services
+                      behind it, the frontend on the developer portal, and the
+                      usage integration through the GitHub API — PostgreSQL for
+                      budget records in production, SQLite locally. Most of the
+                      iteration was with the team on making an approval flow
+                      people don't have to be trained on.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </li>
+          </ol>
+
+          <div class="also">
+            <h3 class="also-title">Before that</h3>
+            <dl class="also-list">
+              <div>
+                <dt>Retail Sales Associate — Vuori</dt>
+                <dd><span class="when">Apr–Jun 2025</span> Exceeded sales goals through tailored customer solutions.</dd>
+              </div>
+              <div>
+                <dt>Tour Guide — San Diego Bike and Kayak</dt>
+                <dd><span class="when">Jul–Sep 2024</span> Led 15+ kayak tours a week, managing safety and logistics.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Projects</p>
+            <h2 id="projects-heading" class="section-title" data-words>Things I built to find out</h2>
+          </div>
+
+          <div class="project">
+            <div class="project-media project-media--type">
+              <div class="type-card" aria-hidden="true">
+                <span class="type-card-top">Premier League analytics</span>
+                <div class="type-card-figure">
+                  <span class="type-card-big">3</span>
+                  <span class="type-card-bot">data sources reconciled into one player table</span>
+                </div>
+              </div>
             </div>
-          </article>
+            <div class="project-body">
+              <p class="project-meta"><span>March 2026</span><span class="dot">/</span><span>Team of 4</span></p>
+              <h3>MatchDay</h3>
+              <p>
+                A Flask analytics platform that merges FPL, Understat, and
+                API-Football into one view of the Premier League. I engineered
+                the pipeline's cross-source player matching — Unicode
+                normalization and fuzzy joins, because the same player is spelled
+                three different ways across three APIs — then built the player
+                and team comparison APIs with percentile charts and per-90
+                normalized metrics.
+              </p>
+              <p class="tags">Flask <span>/</span> Python <span>/</span> Pandas <span>/</span> Pytest</p>
+              <p class="project-note">
+                Also wrote the test suites that enforce a 60% coverage gate
+                across the pipeline, routes, and auth modules.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project-media">
+              <img src="images/mLplot.png" alt="Predicted versus actual Disneyland ride wait times" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>November 2025</span></p>
+              <h3>Disneyland Ride Wait Time Predictor</h3>
+              <p>
+                A time-series forecasting tool for theme park wait times, built
+                with Pandas, XGBoost, and NHITS. The interesting part was feature
+                engineering: hour of day, seasonality, rainfall, and holidays all
+                push wait times around in ways a naive model misses. Evaluated on
+                MAE with residual analysis — 20% lower error than baseline.
+              </p>
+              <p class="tags">Python <span>/</span> Pandas <span>/</span> XGBoost <span>/</span> NHITS <span>/</span> NumPy</p>
+              <p class="project-links">
+                <a class="link-arrow" href="https://github.com/MwBm/DataAnalysisIntro/tree/main" target="_blank" rel="noopener noreferrer" data-cursor="hover">GitHub repo</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project-media">
+              <video
+                controls
+                preload="none"
+                poster="images/awslogo.png"
+                playsinline
+                aria-label="Demo of the AWSxInrix Chrome extension"
+              >
+                <source src="images/aws.mov" type="video/quicktime" />
+                Your browser can't play this video — the DevPost link below has a walkthrough.
+              </video>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>November 2024</span><span class="dot">/</span><span>Hackathon, team of 4</span></p>
+              <h3>AWSxInrix Hackathon</h3>
+              <p>
+                An AI Chrome extension that simplifies web navigation for older
+                users: it reads the current page and returns either plain
+                instructions or a direct link to where you were trying to go. I
+                built the Flask APIs that handle natural language queries and
+                route them to Claude via AWS Bedrock for real-time, context-aware
+                responses. User testing showed a 15-second improvement in average
+                task completion.
+              </p>
+              <p class="tags">Flask <span>/</span> Python <span>/</span> AWS Bedrock <span>/</span> JavaScript</p>
+              <p class="project-links">
+                <a class="link-arrow" href="https://devpost.com/software/askron" target="_blank" rel="noopener noreferrer" data-cursor="hover">DevPost</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section" aria-labelledby="stack-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Stack</p>
+            <h2 id="stack-heading" class="section-title" data-words>What I reach for</h2>
+          </div>
+
+          <div class="stack-grid">
+            <div class="stack-group">
+              <h3>Languages</h3>
+              <ul>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>C</li>
+                <li>C++</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h3>Infrastructure &amp; DevOps</h3>
+              <ul>
+                <li>Kubernetes</li>
+                <li>Helm</li>
+                <li>Terraform</li>
+                <li>Docker</li>
+                <li>GitHub Actions</li>
+                <li>DataDog</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h3>Backend &amp; Data</h3>
+              <ul>
+                <li>Node.js</li>
+                <li>Flask</li>
+                <li>PostgreSQL</li>
+                <li>Pandas</li>
+                <li>Vitest</li>
+                <li>Pytest</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section" aria-labelledby="education-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">School</p>
+            <h2 id="education-heading" class="section-title" data-words>Santa Clara University</h2>
+          </div>
+
+          <div class="edu-grid">
+            <div class="edu-block">
+              <p class="edu-line">
+                <span class="edu-degree">B.S. Computer Science and Engineering</span>
+                <span class="edu-meta">Expected June 2027 <span class="dot">/</span> GPA 3.8</span>
+              </p>
+              <p class="coursework">
+                Software Engineering <span>/</span> Operating Systems
+                <span>/</span> Computer Networks <span>/</span> Database Systems
+                <span>/</span> Algorithms <span>/</span> Machine Learning
+              </p>
+            </div>
+
+            <div class="edu-block">
+              <p class="edu-line">
+                <span class="edu-degree">Resident Assistant &amp; Peer Educator</span>
+                <span class="edu-meta">Sept 2025 — Present</span>
+              </p>
+              <p>
+                I run a residential community of 60 students — programming,
+                mentorship, and the daily unglamorous work of making a floor feel
+                like somewhere people want to live. I also lead study sessions
+                for students who are earlier in the major than I am.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-heading" class="section-title" data-words>Let's build something</h2>
+          </div>
+
+          <p class="contact-lede">
+            I'm looking for summer 2027 internships in platform, infrastructure,
+            and backend engineering. Fastest way to reach me is email.
+          </p>
+
+          <a class="contact-email" href="mailto:matthewbergstrom23@gmail.com" data-cursor="hover">
+            matthewbergstrom23@gmail.com
+          </a>
+
+          <ul class="contact-links">
+            <li><a href="https://github.com/MwBm" target="_blank" rel="noopener noreferrer" data-cursor="hover">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/matthew-john-bergstrom" target="_blank" rel="noopener noreferrer" data-cursor="hover">LinkedIn</a></li>
+            <li><a href="resume/Matthew_Bergstrom_Resume.pdf" target="_blank" rel="noopener" data-cursor="hover">Résumé</a></li>
+            <li><a href="tel:+18589450240" data-cursor="hover">(858) 945-0240</a></li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <script src="js/script.js?v=2.0.0"></script>
+    <footer class="site-footer">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Lifting</span><span>Sunset surfing</span><span>Mountain biking</span><span>A good book</span><span>Padres</span><span>F1</span><span>Basketball</span><span>Landscape photography</span>
+          <span>Lifting</span><span>Sunset surfing</span><span>Mountain biking</span><span>A good book</span><span>Padres</span><span>F1</span><span>Basketball</span><span>Landscape photography</span>
+        </div>
+      </div>
+      <div class="wrap footer-inner">
+        <p>Matthew Bergstrom — San Diego, CA</p>
+        <p class="footer-note">Built by hand. No framework, no build step.</p>
+      </div>
+    </footer>
+
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor-dot"></div>
+      <div class="cursor-ring"></div>
+    </div>
+
+    <script src="js/script.js?v=3.0.0"></script>
   </body>
 </html>
