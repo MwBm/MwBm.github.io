@@ -508,7 +508,9 @@
                 playsinline
                 aria-label="Demo of the AWSxInrix Chrome extension"
               >
-                <source src="images/aws.mov" type="video/quicktime" />
+                <!-- .mov container, H.264 inside: declaring mp4 keeps Chrome
+                     and Firefox from skipping the source outright. -->
+                <source src="images/aws.mov" type="video/mp4" />
                 Your browser can't play this video — the DevPost link below has a walkthrough.
               </video>
             </div>

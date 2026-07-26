@@ -46,7 +46,9 @@ body {
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  /* clip, not hidden: hidden would make body a scroll container and break
+     position: sticky on the portrait. */
+  overflow-x: clip;
 }
 
 img,
