@@ -864,7 +864,7 @@ main {
 
 .stack-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1.5rem, 3vw, 3rem);
 }
 
@@ -890,6 +890,10 @@ main {
   font-stretch: 108%;
   letter-spacing: -0.02em;
   line-height: 1.5;
+  /* Hanging indent: the marker sits in the 1.15rem gutter, so a wrapped
+     entry lines up under its own text instead of under the marker. */
+  padding-left: 1.15rem;
+  text-indent: -1.15rem;
 }
 
 .stack-group li::before {

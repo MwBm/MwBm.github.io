@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Matthew Bergstrom — platform engineer. Kubernetes provisioning, developer self-service, and AI tooling at Resmed."
+      content="Matthew Bergstrom — platform engineer. Kubernetes provisioning, developer self-service, identity automation, and AI tooling. CS &amp; Engineering at Santa Clara University."
     />
     <title>Matthew Bergstrom | Platform Engineer</title>
 
@@ -17,7 +17,7 @@
     />
     <link rel="icon" href="images/icon.ico" type="image/x-icon" />
     <link rel="preload" as="image" href="images/foreststream-1920.jpg" />
-    <link href="css/style.css?v=3.0.0" rel="stylesheet" />
+    <link href="css/style.css?v=3.1.0" rel="stylesheet" />
   </head>
 
   <body>
@@ -61,9 +61,9 @@
       <section class="hero" id="hero" aria-labelledby="hero-heading">
         <div class="wrap hero-inner">
           <p class="hero-eyebrow">
-            <span>Platform Engineering Intern</span>
+            <span>Platform Engineering</span>
             <span class="dot" aria-hidden="true">/</span>
-            <span>Resmed</span>
+            <span>Resmed, 2025–26</span>
             <span class="dot" aria-hidden="true">/</span>
             <span>San Diego, CA</span>
           </p>
@@ -76,21 +76,21 @@
           <p class="hero-lede">
             My passion is building the systems that make other people's lives
             easier, and more enjoyable. Give me that work, and I'm off to the
-            races.
+            races
           </p>
 
           <ul class="hero-facts">
             <li>
               <span class="fact-k">Now</span
+              ><span class="fact-v">Senior year, CS &amp; Engineering, SCU '27</span>
+            </li>
+            <li>
+              <span class="fact-k">Before</span
               ><span class="fact-v">Platform engineering, Resmed</span>
             </li>
             <li>
-              <span class="fact-k">Since</span
-              ><span class="fact-v">June 2025 — three extensions</span>
-            </li>
-            <li>
-              <span class="fact-k">School</span
-              ><span class="fact-v">CS &amp; Engineering, SCU '27</span>
+              <span class="fact-k">Span</span
+              ><span class="fact-v">June 2025 — August 2026</span>
             </li>
           </ul>
 
@@ -124,7 +124,7 @@
           <div class="about-grid">
             <figure class="portrait">
               <img
-                src="images/24_Bergstrom_32-1200.jpg"
+                src="images/bergstrom-portrait-1200.jpg"
                 alt="Matthew Bergstrom"
                 loading="lazy"
                 width="1200"
@@ -135,9 +135,10 @@
 
             <div class="about-copy">
               <p class="lead">
-                I'm a computer science student at Santa Clara and a platform
-                engineer at Resmed, where I've spent the last year replacing
-                manual processes with systems developers can run themselves.
+                I'm a computer science student at Santa Clara. From June 2025
+                through August 2026 I was a platform engineer at Resmed,
+                replacing manual processes with systems developers could run
+                themselves.
               </p>
               <p>
                 Most of my work starts the same way: someone files a request, a
@@ -145,15 +146,18 @@
                 the cost of doing business. I like taking that apart —
                 provisioning Kubernetes namespaces through an API instead of a
                 ticket, rebuilding a Bash pipeline into TypeScript that a team
-                can actually test, or reading a year of support messages with an
-                LLM so leads can see which platform problems keep coming back.
+                can actually test, reading a year of support messages with an
+                LLM so leads can see which platform problems keep coming back,
+                or replacing a hand-maintained account list with a reconciler
+                that shows you its plan before it touches anything.
               </p>
               <p>
                 I care about the boring parts that make automation trustworthy:
-                retries, rollbacks, tight permission scopes, and tests that fail
-                before production does. I work in sprints alongside senior
-                engineers, write things down, and try to leave every system
-                easier to change than I found it.
+                retries, rollbacks, tight permission scopes, dry runs before
+                anything destructive, and tests that fail before production
+                does. I worked in sprints alongside senior engineers, wrote
+                things down, and tried to leave every system easier to change
+                than I found it.
               </p>
               <p>
                 Outside of work I'm lifting, surfing at sunset, on a mountain
@@ -254,10 +258,10 @@
               Platform engineering at Resmed
             </h2>
             <p class="section-note">
-              Six systems, listed in the order I shipped them. June 2025 to
-              present — three internship extensions, part-time at 10–15 hrs/week
-              during the school year, and an Outstanding Presentation award
-              along the way.
+              Eight systems, listed in the order I shipped them. June 2025
+              through August 2026 — three internship extensions, part-time at
+              10–15 hrs/week during the school year, and an Outstanding
+              Presentation award along the way.
             </p>
           </div>
 
@@ -358,7 +362,8 @@
                   Built a daily-to-monthly pipeline that reads our developer
                   support channel and tells platform leads which parts of the
                   platform actually hurt — classified by area, counted weekly,
-                  summarized monthly.
+                  summarized monthly. About 1,000 messages a week, 50,000+ since
+                  it went live.
                 </p>
                 <details class="disclose">
                   <summary data-cursor="hover">How it works</summary>
@@ -410,9 +415,10 @@
                 <h3>Kubernetes namespace provisioning</h3>
                 <p class="work-summary">
                   Designed and built the system that provisions custom
-                  Kubernetes namespaces on demand. Teams used to get exactly one
-                  namespace per cluster, tied to the team name — a second one
-                  meant inventing a second team.
+                  Kubernetes namespaces on demand — now 143 namespace
+                  definitions across 13 EKS clusters. Teams used to get exactly
+                  one namespace per cluster, tied to the team name — a second
+                  one meant inventing a second team.
                 </p>
                 <details class="disclose">
                   <summary data-cursor="hover">How it works</summary>
@@ -473,31 +479,174 @@
               <div class="work-side">
                 <div class="work-index" aria-hidden="true">06</div>
                 <ul class="tags tags-stack">
+                  <li>React</li>
                   <li>Node.js</li>
                   <li>TypeScript</li>
                   <li>PostgreSQL</li>
-                  <li>SQLite</li>
                   <li>GitHub API</li>
                 </ul>
               </div>
               <div class="work-body">
-                <h3>GitHub Copilot budget tool</h3>
+                <h3>AI spend governance</h3>
                 <p class="work-summary">
-                  Owned a full-stack self-service page end to end: developers
-                  check their Copilot usage and request budget, and leads
-                  approve or reject requests in the same place.
+                  Owned a full-stack self-service product end to end: developers
+                  check their Copilot usage and request budget, and their
+                  managers approve or reject in the same place. It routed $1.34M
+                  in requests from 352 engineers in its first four months.
                 </p>
                 <details class="disclose">
                   <summary data-cursor="hover">How it works</summary>
                   <div class="disclose-body">
                     <p>
                       I built the routes, middleware, handlers, and services
-                      behind it, the frontend on the developer portal, and the
-                      usage integration through the GitHub API — PostgreSQL for
-                      budget records in production, SQLite locally. Most of the
-                      iteration was with the team on making an approval flow
-                      people don't have to be trained on.
+                      behind it, the React frontend on the developer portal, and
+                      the provisioning integration against GitHub's billing API
+                      — approved budgets are written to the vendor, not just
+                      recorded in a table. PostgreSQL for budget records in
+                      production, SQLite locally.
                     </p>
+                    <ul>
+                      <li>
+                        <strong>Approval you can audit</strong> — every request
+                        carries its requester, approving manager, justification
+                        and expiry, and self-approval is rejected outright.
+                      </li>
+                      <li>
+                        <strong>Scheduled reconciliation</strong> — a monthly job
+                        resets budgets and a daily one reports on them, so the
+                        portal and the vendor's numbers can't quietly drift
+                        apart.
+                      </li>
+                    </ul>
+                    <p>
+                      Most of the iteration was with the team on making an
+                      approval flow people don't have to be trained on.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </li>
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">07</div>
+                <ul class="tags tags-stack">
+                  <li>TypeScript</li>
+                  <li>GitHub API</li>
+                  <li>GitHub Actions</li>
+                  <li>OIDC</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>Team-aware pull request approval gate</h3>
+                <p class="work-summary">
+                  Built the merge gate that decides whether a pull request has
+                  actually satisfied its review requirements, publishes that
+                  decision as a commit status, and keeps a live approval table
+                  in the PR body. Solo, from an empty repository.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      Counting approvals sounds trivial and isn't. Almost all
+                      the work was writing down a policy for the cases most
+                      approval scripts get wrong, and then holding to it:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Comments don't revoke</strong> — leaving a
+                        comment after approving used to silently withdraw the
+                        approval. Requesting changes revokes; commenting doesn't.
+                      </li>
+                      <li>
+                        <strong>Multi-team quorum</strong> — each required team
+                        can be made to reach the threshold independently, or
+                        approvals can pool across teams with a reviewer on two
+                        teams counted once.
+                      </li>
+                      <li>
+                        <strong>Small teams can't deadlock</strong> — if a
+                        required team has fewer members than the threshold,
+                        fallback reviewers are added to it rather than swapped in
+                        for it.
+                      </li>
+                      <li>
+                        <strong>Bots and the author never count</strong> — no
+                        self-approval, no inflating quorum with automation.
+                      </li>
+                      <li>
+                        <strong>Missing approvals aren't failures</strong> — the
+                        gate reports pending and only fails on a genuine
+                        execution error, so a red check always means something is
+                        actually broken.
+                      </li>
+                    </ul>
+                    <p>
+                      It authenticates through OIDC to a short-lived app token
+                      rather than a long-lived personal token, which matters more
+                      than usual for something that runs on every pull request.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-side">
+                <div class="work-index" aria-hidden="true">08</div>
+                <ul class="tags tags-stack">
+                  <li>TypeScript</li>
+                  <li>OIDC</li>
+                  <li>GitHub API</li>
+                  <li>OpenAI API</li>
+                </ul>
+              </div>
+              <div class="work-body">
+                <h3>Declarative identity lifecycle automation</h3>
+                <p class="work-summary">
+                  Automated joiner-mover-leaver across a 3,295-member GitHub
+                  Enterprise and our OpenAI Platform accounts. Membership is
+                  declared in config; the system works out the difference and
+                  applies it.
+                </p>
+                <details class="disclose">
+                  <summary data-cursor="hover">How it works</summary>
+                  <div class="disclose-body">
+                    <p>
+                      This is the piece of work I'd defend hardest on design. It
+                      is a level-triggered reconciler in the Terraform sense: a
+                      pure <em>plan</em> function reads desired state and
+                      observed state and returns the set of changes, and a
+                      separate <em>apply</em> step is the only thing allowed to
+                      mutate anything. Planning has no side effects, so it is
+                      cheap to test — you assert on a diff, not on a mock of a
+                      vendor API.
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Dry run first</strong> — every destructive path
+                        supports, and defaults to showing, the plan before it
+                        runs. Revoking someone's access by accident is not a bug
+                        you get to fix afterwards.
+                      </li>
+                      <li>
+                        <strong>Two identities, one person</strong> — dormant
+                        accounts are only reaped when the GitHub username and the
+                        corporate directory email agree, because either signal
+                        alone produces false positives.
+                      </li>
+                      <li>
+                        <strong>No long-lived secrets</strong> — jobs
+                        authenticate through OIDC and fetch credentials at
+                        runtime, so there is nothing standing in a repository to
+                        leak.
+                      </li>
+                      <li>
+                        <strong>A typed client</strong> — I wrote the typed
+                        wrapper for the OpenAI administration API rather than
+                        passing untyped JSON around the reconciler.
+                      </li>
+                    </ul>
                   </div>
                 </details>
               </div>
@@ -587,29 +736,39 @@
             <div class="project-media">
               <img
                 src="images/mLplot.png"
-                alt="Predicted versus actual Disneyland ride wait times"
+                alt="Mean absolute error per ride across the candidate wait-time models"
                 loading="lazy"
               />
             </div>
             <div class="project-body">
               <p class="project-meta"><span>November 2025</span></p>
-              <h3>Disneyland Ride Wait Time Predictor</h3>
+              <h3>Disneyland Crowd and Wait Time Predictor</h3>
               <p>
-                A time-series forecasting tool for theme park wait times, built
-                with Pandas, XGBoost, and NHITS. The interesting part was
-                feature engineering: hour of day, seasonality, rainfall, and
-                holidays all push wait times around in ways a naive model
-                misses. Evaluated on MAE with residual analysis — 20% lower
-                error than baseline.
+                A deployed full-stack wait-time predictor: a scheduled job
+                ingests live queue data, XGBoost models forecast per-ride waits,
+                and a Next.js frontend serves crowd scores and per-ride
+                predictions for any date you pick.
+              </p>
+              <p>
+                The part I'm proudest of is the accuracy page. It scores every
+                prediction the site ever published against the wait that
+                actually happened, so the number on display is the model's live
+                error rate — not a training-time figure that quietly stopped
+                being true months ago.
               </p>
               <p class="tags">
-                Python <span>/</span> Pandas <span>/</span> XGBoost
-                <span>/</span> NHITS <span>/</span> NumPy
+                Next.js <span>/</span> TypeScript <span>/</span> Python
+                <span>/</span> XGBoost <span>/</span> Supabase
+                <span>/</span> Prisma
+              </p>
+              <p class="project-note">
+                Covered with Jest, Playwright, and pytest suites across the
+                frontend, the end-to-end flows, and the ML service.
               </p>
               <p class="project-links">
                 <a
                   class="link-arrow"
-                  href="https://github.com/MwBm/DataAnalysisIntro/tree/main"
+                  href="https://github.com/MwBm/disneyWebsite"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="hover"
@@ -686,30 +845,44 @@
                 <li>Python</li>
                 <li>JavaScript</li>
                 <li>SQL</li>
-                <li>C</li>
-                <li>C++</li>
+                <li>C / C++</li>
+                <li>Bash</li>
               </ul>
             </div>
             <div class="stack-group">
               <h3>Infrastructure &amp; DevOps</h3>
               <ul>
+                <li>AWS (EKS, EFS)</li>
                 <li>Kubernetes</li>
                 <li>Helm</li>
                 <li>Terraform</li>
                 <li>Docker</li>
                 <li>GitHub Actions</li>
                 <li>DataDog</li>
+                <li>OIDC</li>
               </ul>
             </div>
             <div class="stack-group">
-              <h3>Backend &amp; Data</h3>
+              <h3>Web &amp; Data</h3>
               <ul>
                 <li>Node.js</li>
+                <li>React</li>
                 <li>Flask</li>
-                <li>PostgreSQL</li>
+                <li>PostgreSQL / Knex</li>
+                <li>REST API design</li>
                 <li>Pandas</li>
-                <li>Vitest</li>
-                <li>Pytest</li>
+                <li>Vitest / Pytest</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h3>AI</h3>
+              <ul>
+                <li>OpenAI API</li>
+                <li>Vector stores</li>
+                <li>LLM classification</li>
+                <li>MCP</li>
+                <li>AWS Bedrock</li>
+                <li>XGBoost</li>
               </ul>
             </div>
           </div>
@@ -733,7 +906,8 @@
             <div class="edu-block">
               <p class="edu-line">
                 <span class="edu-degree"
-                  >B.S. Computer Science and Engineering</span
+                  >B.S. Computer Science and Engineering, minor in
+                  Mathematics</span
                 >
                 <span class="edu-meta"
                   >Expected June 2027 <span class="dot">/</span> GPA 3.8</span
@@ -741,8 +915,11 @@
               </p>
               <p class="coursework">
                 Software Engineering <span>/</span> Operating Systems
-                <span>/</span> Computer Networks <span>/</span> Database Systems
-                <span>/</span> Algorithms <span>/</span> Machine Learning
+                <span>/</span> Computer Architecture <span>/</span> Computer
+                Networks <span>/</span> Database Systems <span>/</span>
+                Algorithms <span>/</span> Compilers <span>/</span> Cryptography
+                <span>/</span> Machine Learning <span>/</span> Artificial
+                Intelligence
               </p>
             </div>
 
@@ -774,8 +951,9 @@
           </div>
 
           <p class="contact-lede">
-            I'm looking for summer 2027 internships in platform, infrastructure,
-            and backend engineering. Fastest way to reach me is email.
+            I graduate in June 2027 and I'm looking for new-grad software
+            engineering roles in platform, infrastructure, and backend. Fastest
+            way to reach me is email.
           </p>
 
           <a
