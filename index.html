@@ -16,8 +16,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="images/icon.ico" type="image/x-icon" />
-    <link rel="preload" as="image" href="images/foreststream-1920.jpg" />
-    <link href="css/style.css?v=3.1.0" rel="stylesheet" />
+    <link rel="preload" as="image" href="images/foreststream-fill-1920.jpg" />
+    <link href="css/style.css?v=3.2.0" rel="stylesheet" />
   </head>
 
   <body>
@@ -82,7 +82,9 @@
           <ul class="hero-facts">
             <li>
               <span class="fact-k">Now</span
-              ><span class="fact-v">Senior year, CS &amp; Engineering, SCU '27</span>
+              ><span class="fact-v"
+                >Senior year, CS &amp; Engineering, SCU '27</span
+              >
             </li>
             <li>
               <span class="fact-k">Before</span
@@ -512,9 +514,9 @@
                         and expiry, and self-approval is rejected outright.
                       </li>
                       <li>
-                        <strong>Scheduled reconciliation</strong> — a monthly job
-                        resets budgets and a daily one reports on them, so the
-                        portal and the vendor's numbers can't quietly drift
+                        <strong>Scheduled reconciliation</strong> — a monthly
+                        job resets budgets and a daily one reports on them, so
+                        the portal and the vendor's numbers can't quietly drift
                         apart.
                       </li>
                     </ul>
@@ -556,7 +558,8 @@
                       <li>
                         <strong>Comments don't revoke</strong> — leaving a
                         comment after approving used to silently withdraw the
-                        approval. Requesting changes revokes; commenting doesn't.
+                        approval. Requesting changes revokes; commenting
+                        doesn't.
                       </li>
                       <li>
                         <strong>Multi-team quorum</strong> — each required team
@@ -567,8 +570,8 @@
                       <li>
                         <strong>Small teams can't deadlock</strong> — if a
                         required team has fewer members than the threshold,
-                        fallback reviewers are added to it rather than swapped in
-                        for it.
+                        fallback reviewers are added to it rather than swapped
+                        in for it.
                       </li>
                       <li>
                         <strong>Bots and the author never count</strong> — no
@@ -577,14 +580,15 @@
                       <li>
                         <strong>Missing approvals aren't failures</strong> — the
                         gate reports pending and only fails on a genuine
-                        execution error, so a red check always means something is
-                        actually broken.
+                        execution error, so a red check always means something
+                        is actually broken.
                       </li>
                     </ul>
                     <p>
                       It authenticates through OIDC to a short-lived app token
-                      rather than a long-lived personal token, which matters more
-                      than usual for something that runs on every pull request.
+                      rather than a long-lived personal token, which matters
+                      more than usual for something that runs on every pull
+                      request.
                     </p>
                   </div>
                 </details>
@@ -631,9 +635,9 @@
                       </li>
                       <li>
                         <strong>Two identities, one person</strong> — dormant
-                        accounts are only reaped when the GitHub username and the
-                        corporate directory email agree, because either signal
-                        alone produces false positives.
+                        accounts are only reaped when the GitHub username and
+                        the corporate directory email agree, because either
+                        signal alone produces false positives.
                       </li>
                       <li>
                         <strong>No long-lived secrets</strong> — jobs
@@ -916,10 +920,10 @@
               <p class="coursework">
                 Software Engineering <span>/</span> Operating Systems
                 <span>/</span> Computer Architecture <span>/</span> Computer
-                Networks <span>/</span> Database Systems <span>/</span>
-                Algorithms <span>/</span> Compilers <span>/</span> Cryptography
-                <span>/</span> Machine Learning <span>/</span> Artificial
-                Intelligence
+                Networks <span>/</span> Database Systems
+                <span>/</span> Algorithms <span>/</span> Compilers
+                <span>/</span> Cryptography <span>/</span> Machine Learning
+                <span>/</span> Artificial Intelligence
               </p>
             </div>
 
@@ -1020,6 +1024,6 @@
       <div class="cursor-ring"></div>
     </div>
 
-    <script src="js/script.js?v=3.0.0"></script>
+    <script src="js/script.js?v=3.2.0"></script>
   </body>
 </html>

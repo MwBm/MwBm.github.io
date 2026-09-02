@@ -21,9 +21,11 @@
   --muted: #6b6a55; /* ~5.4:1 on paper. Do NOT go lighter — #878672 fails at 3.7:1 */
   --rule: #14140e;
   --rule-soft: rgba(20, 20, 14, 0.16);
-  /* Accent is ~3.6:1 on paper: OK for display type >=24px, rules, borders and
-     fills. NEVER use it for body-size text. */
-  --accent: #e8552f;
+  /* Forest green, picked to echo the photo inside the display name.
+     6.3:1 on paper, so unlike the old orange (3.6:1) it is safe at body and
+     mono-label sizes too. Keep it lighter than --ink or it stops reading as
+     an accent: 2.9:1 against the ink is the separation to preserve. */
+  --accent: #2f6b3c;
   --olive: #878672; /* decorative only, never text */
 
   --wrap: 1240px;
@@ -354,14 +356,28 @@ main {
   display: block;
 }
 
+/* The name is SOLID INK until two things are true, because getting this wrong
+   makes it vanish entirely rather than degrade:
+
+   1. Clip the LINES, not the h1. Safari's -webkit-background-clip: text
+      ignores text inside descendant block boxes. The h1's only text lives in
+      two display:block spans, so clipping on the h1 painted nothing while the
+      transparent color still applied — an invisible but selectable name.
+      Measured in WebKit: 0% of the box painted with the clip on the h1,
+      48.7% with it on the spans.
+   2. Transparency is opt-in via html.fill-ok, which script.js adds only once
+      the fill image has loaded. An earlier attempt used
+      `background-color: var(--ink)` as the fallback, which cannot work —
+      background-color is clipped by background-clip: text too, so when the
+      clip does not paint, the ink never arrives either. No JS, blocked or
+      slow image, 404, or no clip support now all leave ink letters.
+
+   Single background layer on purpose: the old gradient-over-image stack is the
+   construct browsers most often fail to clip, so the darkening is baked into
+   foreststream-fill-1920.jpg instead. */
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .hero-title[data-fill] {
-    /* Ink underneath the photo: if the image is slow, blocked, or the clip
-       doesn't paint, the letters are still solid ink rather than invisible. */
-    background-color: var(--ink);
-    background-image:
-      linear-gradient(rgba(16, 18, 10, 0.52), rgba(16, 18, 10, 0.52)),
-      url("../images/foreststream-1920.jpg");
+  .fill-ok .hero-title[data-fill] .line {
+    background-image: url("../images/foreststream-fill-1920.jpg");
     background-size: 118% auto;
     background-position: calc(50% + var(--mx, 0px)) calc(42% + var(--my, 0px));
     background-repeat: no-repeat;
@@ -369,6 +385,17 @@ main {
     background-clip: text;
     -webkit-text-fill-color: transparent; /* Safari needs this, not just color */
     color: transparent;
+  }
+
+  /* Both lines are the same width and height, so their background boxes resolve
+     identically. Shifting the second up by exactly one line height keeps the
+     photo continuous across the pair instead of restarting it on each line.
+     Guarded because a browser without `lh` would invalidate the whole calc and
+     drop the pointer parallax with it. */
+  @supports (background-position-y: calc(1lh)) {
+    .fill-ok .hero-title[data-fill] .line:nth-child(2) {
+      background-position-y: calc(42% + var(--my, 0px) - 1lh);
+    }
   }
 }
 

@@ -131,6 +131,25 @@ function initScrollType() {
 
 /* -------------------------------------------------------------- the hero */
 
+/* The photo-filled name is opt-in. CSS keeps the letters solid ink until this
+   adds .fill-ok, so a browser that honours `color: transparent` without
+   painting the clipped background can never leave the name invisible. We wait
+   for a real load event rather than trusting CSS.supports, because support for
+   the property is not the same as the effect actually painting. */
+function initHeroFill() {
+  const title = document.querySelector(".hero-title[data-fill]");
+  if (!title) return;
+
+  const clips =
+    CSS.supports("-webkit-background-clip", "text") ||
+    CSS.supports("background-clip", "text");
+  if (!clips) return;
+
+  const img = new Image();
+  img.addEventListener("load", () => root.classList.add("fill-ok"));
+  img.src = "images/foreststream-fill-1920.jpg";
+}
+
 /* The display name is a window onto the landscape photo; moving the pointer
    shifts the view inside the letterforms. */
 function initHeroParallax() {
@@ -289,6 +308,7 @@ function initEasterEggs() {
 
 initNavigation();
 initScrollType();
+initHeroFill();
 initHeroParallax();
 initCursor();
 initEasterEggs();
