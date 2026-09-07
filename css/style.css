@@ -865,6 +865,13 @@ main {
   font-size: 0.95rem;
 }
 
+/* Cards can carry more than one link; keep them apart when they wrap. */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.6rem;
+}
+
 .link-arrow {
   display: inline-flex;
   align-items: center;
@@ -1001,10 +1008,14 @@ main {
 
 .contact-email {
   display: block;
-  font-size: clamp(1.5rem, 5.6vw, 4rem);
+  /* Sized so the address clears one line: it measures ~19.5x its own
+     font-size, and the wrap gives it 92vw (1136px once --wrap caps). The
+     <wbr> after the @ means a narrow screen splits it there rather than
+     mid-word; anywhere is only the last resort below ~360px. */
+  font-size: clamp(1.25rem, 4.6vw, 3.5rem);
   font-weight: 800;
   font-stretch: 118%;
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: -0.035em;
   text-decoration: none;
   padding-bottom: 0.35em;

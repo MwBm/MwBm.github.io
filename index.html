@@ -17,7 +17,7 @@
     />
     <link rel="icon" href="images/icon.ico" type="image/x-icon" />
     <link rel="preload" as="image" href="images/foreststream-fill-1920.jpg" />
-    <link href="css/style.css?v=3.2.0" rel="stylesheet" />
+    <link href="css/style.css?v=3.5.0" rel="stylesheet" />
   </head>
 
   <body>
@@ -693,6 +693,56 @@
           <div class="project">
             <div class="project-media project-media--type">
               <div class="type-card" aria-hidden="true">
+                <span class="type-card-top">Pipelined 32-bit CPU</span>
+                <div class="type-card-figure">
+                  <span class="type-card-big">5</span>
+                  <span class="type-card-bot"
+                    >stages, hazards paid for in NOPs alone</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">
+                <span>May 2026</span><span class="dot">/</span
+                ><span>Team of 2</span>
+              </p>
+              <h3>Five-Stage Pipelined CPU</h3>
+              <p>
+                A structural Verilog model of a 32-bit pipelined processor for
+                the SCU instruction set — 12 instructions spanning arithmetic,
+                logic, memory access, branching, and PC manipulation, split
+                across fetch, decode, execute, memory, and write-back. It builds
+                on ALU and memory blocks from earlier labs; the control unit,
+                the immediate generator, and the pipeline registers that carry
+                control signals forward alongside the data are new for this
+                design.
+              </p>
+              <p>
+                There's no forwarding unit, so every hazard has to be paid for
+                in NOPs. Working out where they go — one delay slot behind each
+                branch, one for the load-use dependency, three to drain the
+                pipeline behind a jump — is what made the thing click for me: 8
+                NOPs across 30 issued slots, a quarter of the machine's time
+                spent waiting on itself.
+              </p>
+              <p class="tags">
+                Verilog <span>/</span> Vivado <span>/</span> RISC datapath
+                <span>/</span> RTL simulation
+              </p>
+              <p class="project-note">
+                Verified against the course benchmark in Vivado — all 10
+                register and memory checks match the hand-traced values.
+                Critical-path analysis on the given component delays puts the
+                clock ceiling at 500 MHz, roughly 3.75× an equivalent
+                single-cycle build.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project-media project-media--type">
+              <div class="type-card" aria-hidden="true">
                 <span class="type-card-top">Premier League analytics</span>
                 <div class="type-card-figure">
                   <span class="type-card-big">3</span>
@@ -739,21 +789,28 @@
           </div>
 
           <div class="project">
-            <div class="project-media">
-              <img
-                src="images/mLplot.png"
-                alt="Mean absolute error per ride across the candidate wait-time models"
-                loading="lazy"
-              />
+            <div class="project-media project-media--type">
+              <div class="type-card" aria-hidden="true">
+                <span class="type-card-top">Disneyland wait times</span>
+                <div class="type-card-figure">
+                  <span class="type-card-big">23</span>
+                  <span class="type-card-bot"
+                    >features behind every per-ride prediction</span
+                  >
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <p class="project-meta"><span>November 2025</span></p>
               <h3>Disneyland Crowd and Wait Time Predictor</h3>
               <p>
-                A deployed full-stack wait-time predictor: a scheduled job
-                ingests live queue data, XGBoost models forecast per-ride waits,
-                and a Next.js frontend serves crowd scores and per-ride
-                predictions for any date you pick.
+                A deployed full-stack wait-time predictor. A GitHub Actions job
+                pulls live queue data into Supabase, XGBoost models built on 23
+                features forecast every ride, and a Next.js frontend turns that
+                into a crowd score for whatever date you pick, a month-at-a-glance
+                calendar, and a per-ride wait table. A Groq-hosted Llama
+                assistant takes the questions a date picker can't answer, with
+                the live park context already in hand.
               </p>
               <p>
                 The part I'm proudest of is the accuracy page. It scores every
@@ -765,13 +822,22 @@
               <p class="tags">
                 Next.js <span>/</span> TypeScript <span>/</span> Python
                 <span>/</span> XGBoost <span>/</span> Supabase
-                <span>/</span> Prisma
+                <span>/</span> Prisma <span>/</span> Groq
               </p>
               <p class="project-note">
-                Covered with Jest, Playwright, and pytest suites across the
-                frontend, the end-to-end flows, and the ML service.
+                Models validated with expanding-window walk-forward CV. Over 300
+                Jest unit and route tests, plus Playwright end-to-end runs and
+                pytest suites over the ML service.
               </p>
               <p class="project-links">
+                <a
+                  class="link-arrow"
+                  href="https://disney-website-seven.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  >Visit the site</a
+                >
                 <a
                   class="link-arrow"
                   href="https://github.com/MwBm/disneyWebsite"
@@ -785,20 +851,16 @@
           </div>
 
           <div class="project">
-            <div class="project-media">
-              <video
-                controls
-                preload="none"
-                poster="images/awslogo.png"
-                playsinline
-                aria-label="Demo of the AWSxInrix Chrome extension"
-              >
-                <!-- .mov container, H.264 inside: declaring mp4 keeps Chrome
-                     and Firefox from skipping the source outright. -->
-                <source src="images/aws.mov" type="video/mp4" />
-                Your browser can't play this video — the DevPost link below has
-                a walkthrough.
-              </video>
+            <div class="project-media project-media--type">
+              <div class="type-card" aria-hidden="true">
+                <span class="type-card-top">AI navigation assistant</span>
+                <div class="type-card-figure">
+                  <span class="type-card-big">15</span>
+                  <span class="type-card-bot"
+                    >seconds faster per task in user testing</span
+                  >
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <p class="project-meta">
@@ -822,11 +884,19 @@
               <p class="project-links">
                 <a
                   class="link-arrow"
-                  href="https://devpost.com/software/askron"
+                  href="https://youtu.be/SXqaZD2oD-c"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="hover"
-                  >DevPost</a
+                  >Watch the demo</a
+                >
+                <a
+                  class="link-arrow"
+                  href="https://github.com/MwBm/awsxinrix24prj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cursor="hover"
+                  >GitHub repo</a
                 >
               </p>
             </div>
@@ -852,6 +922,7 @@
                 <li>JavaScript</li>
                 <li>SQL</li>
                 <li>C / C++</li>
+                <li>Verilog</li>
                 <li>Bash</li>
               </ul>
             </div>
@@ -888,6 +959,7 @@
                 <li>LLM classification</li>
                 <li>MCP</li>
                 <li>AWS Bedrock</li>
+                <li>Groq</li>
                 <li>XGBoost</li>
               </ul>
             </div>
@@ -968,7 +1040,7 @@
             href="mailto:matthewbergstrom23@gmail.com"
             data-cursor="hover"
           >
-            matthewbergstrom23@gmail.com
+            matthewbergstrom23@<wbr />gmail.com
           </a>
 
           <ul class="contact-links">
@@ -1027,6 +1099,6 @@
       <div class="cursor-ring"></div>
     </div>
 
-    <script src="js/script.js?v=3.2.0"></script>
+    <script src="js/script.js?v=3.5.0"></script>
   </body>
 </html>
