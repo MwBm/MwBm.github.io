@@ -147,7 +147,7 @@ function initHeroFill() {
 
   const img = new Image();
   img.addEventListener("load", () => root.classList.add("fill-ok"));
-  img.src = "images/foreststream-fill-1920.jpg";
+  img.src = "images/foreststream-1920.jpg";
 }
 
 /* The display name is a window onto the landscape photo; moving the pointer
@@ -191,58 +191,6 @@ function initHeroParallax() {
     { threshold: 0 }
   );
   visibility.observe(hero);
-}
-
-/* ----------------------------------------------------------- the cursor */
-
-function initCursor() {
-  if (!hasFinePointer || prefersReducedMotion) return;
-
-  const cursor = document.querySelector(".cursor");
-  const dot = cursor?.querySelector(".cursor-dot");
-  const ring = cursor?.querySelector(".cursor-ring");
-  if (!cursor || !dot || !ring) return;
-
-  root.classList.add("has-cursor");
-
-  let targetX = window.innerWidth / 2;
-  let targetY = window.innerHeight / 2;
-  let ringX = targetX;
-  let ringY = targetY;
-
-  window.addEventListener(
-    "pointermove",
-    (event) => {
-      if (!root.classList.contains("cursor-live")) {
-        // Jump the ring to the pointer on first move instead of flying in.
-        ringX = event.clientX;
-        ringY = event.clientY;
-        root.classList.add("cursor-live");
-      }
-      targetX = event.clientX;
-      targetY = event.clientY;
-      dot.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
-    },
-    { passive: true }
-  );
-
-  const loop = () => {
-    ringX += (targetX - ringX) * 0.16;
-    ringY += (targetY - ringY) * 0.16;
-    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
-    requestAnimationFrame(loop);
-  };
-  requestAnimationFrame(loop);
-
-  document.addEventListener("pointerover", (event) => {
-    const hot = event.target instanceof Element &&
-      event.target.closest('[data-cursor="hover"], a, button, summary');
-    root.classList.toggle("cursor-hot", Boolean(hot));
-  });
-
-  document.addEventListener("pointerleave", () =>
-    root.classList.remove("cursor-hot")
-  );
 }
 
 /* ---------------------------------------------------------- easter eggs */
@@ -310,5 +258,4 @@ initNavigation();
 initScrollType();
 initHeroFill();
 initHeroParallax();
-initCursor();
 initEasterEggs();

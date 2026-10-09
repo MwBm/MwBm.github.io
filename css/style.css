@@ -373,11 +373,10 @@ main {
       slow image, 404, or no clip support now all leave ink letters.
 
    Single background layer on purpose: the old gradient-over-image stack is the
-   construct browsers most often fail to clip, so the darkening is baked into
-   foreststream-fill-1920.jpg instead. */
+   construct browsers most often fail to clip. */
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .fill-ok .hero-title[data-fill] .line {
-    background-image: url("../images/foreststream-fill-1920.jpg");
+    background-image: url("../images/foreststream-1920.jpg");
     background-size: 118% auto;
     background-position: calc(50% + var(--mx, 0px)) calc(42% + var(--my, 0px));
     background-repeat: no-repeat;
@@ -1198,68 +1197,6 @@ main {
     opacity: 1;
     transform: none;
   }
-}
-
-/* Custom cursor */
-.cursor {
-  display: none;
-}
-
-html.has-cursor .cursor {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-html.has-cursor,
-html.has-cursor a,
-html.has-cursor button,
-html.has-cursor summary,
-html.has-cursor input {
-  cursor: none;
-}
-
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-}
-
-/* Only shown once the pointer has actually moved. */
-html.cursor-live .cursor-dot,
-html.cursor-live .cursor-ring {
-  opacity: 1;
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  margin: -3px 0 0 -3px;
-  background: var(--accent);
-}
-
-.cursor-ring {
-  width: 34px;
-  height: 34px;
-  margin: -17px 0 0 -17px;
-  border: 1px solid var(--ink);
-  transition: width 0.22s ease, height 0.22s ease, margin 0.22s ease,
-    background-color 0.22s ease, border-color 0.22s ease;
-}
-
-html.cursor-hot .cursor-ring {
-  width: 58px;
-  height: 58px;
-  margin: -29px 0 0 -29px;
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 /* Konami: blueprint mode — show the grid the layout is built on */
